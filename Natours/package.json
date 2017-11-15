@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass" : "node-sass sass/main.scss css/style.css -w"
+    "watch:scss": "node-sass scss/main.scss css/style.css -w"
   },
   "author": "Shovan Chatterjee",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.6.1"
+    "node-sass": "^4.5.3"
   }
 }
