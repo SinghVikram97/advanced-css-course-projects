@@ -1,6 +1,7 @@
-.u-center-text { text-align: center;}
+// We are using !important here, utility class must take foremost precedence
+.u-center-text { text-align: center !important;}
 
-.u-m-bottom-small { margin-bottom: 1.5rem;}
-.u-m-bottom-medium { margin-bottom: 4rem;}
-.u-m-bottom-big { margin-bottom: 8rem;}
-.u-m-top-big { margin-top: 10rem};
+.u-m-bottom-small { margin-bottom: 1.5rem !important;}
+.u-m-bottom-medium { margin-bottom: 4rem !important;}
+.u-m-bottom-big { margin-bottom: 8rem !important;}
+.u-m-top-big { margin-top: 10rem !important;}
