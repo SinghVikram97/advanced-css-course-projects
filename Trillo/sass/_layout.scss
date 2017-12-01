@@ -1,17 +1,17 @@
-.container {
-  max-width: 120rem;
-  margin: 7rem auto;
-  background-color: var(--color-grey-light-2);
-  box-shadow: var(--shadow-dark);
+// .container {
+//   max-width: 120rem;
+//   margin: 7rem auto;
+//   background-color: var(--color-grey-light-2);
+//   box-shadow: var(--shadow-dark);
 
-  min-height: 50rem;
+//   min-height: 50rem;
 
-  @media only screen and (max-width: $bp-largest) {
-    margin: 0;
-    max-width: 100%;
-    width: 100%;
-  }
-}
+//   @media only screen and (max-width: $bp-largest) {
+//     margin: 0;
+//     max-width: 100%;
+//     width: 100%;
+//   }
+// }
 
 .header {
   font-size: 1.4rem;
