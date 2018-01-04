@@ -14,9 +14,19 @@ $color-grey-dark-2: #6D5D4B;
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
+// RESPONSIVE BREAKPOINTS (Use em for breakpoints)
+$bp-largest: 75em; // 1200px/16
+$bp-large: 62.5em; // 1000px/16
+$bp-medium: 50em;  // 800px/16
+$bp-small: 37.5em;  // 600px/16
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;  // 1 rem = 10px -> 10px/16px=62.5
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%; // 1rem = 8px -> 8px/16px = 50
+  }
 }
 
 *,
@@ -34,8 +44,18 @@ body {
   line-height: 1.6;
 }
 
+// Its a good idea have named column and rows for the main site layout instead of the numbered lines
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: 6rem calc(100vh - 6rem);  // The rest of the rows will be placed by implicit grid with min-content
+  }
 }
